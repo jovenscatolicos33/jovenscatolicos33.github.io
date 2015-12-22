@@ -20,6 +20,7 @@ body{
 }
 .drawing{
 	width: 100%;
+	display: none;
 }
 .drawingSection{
 	width: 100%;

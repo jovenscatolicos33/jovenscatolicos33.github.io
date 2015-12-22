@@ -2,6 +2,7 @@ $(document).ready(function () {
 	
 	//screen the loading
 	$(window).load(function() {
+	$(".drawing").fadeIn();
 	$("#loading").fadeOut();
 	});
 	
