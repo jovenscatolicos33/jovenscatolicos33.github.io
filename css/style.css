@@ -28,8 +28,11 @@ body{
 	width: 100%;
 	max-width: 300px;
 }
+.section{
+	padding-bottom: 5%;
+}
 .title{
-	padding: 5%;
+	padding-top: 5%;
 	text-align: center;
 }
 table{
@@ -59,15 +62,16 @@ small{
 .paperold{
 	color: white;
 	text-align: left;
-	background-image: url("../img/paperold.png");
+	background-image: url("../img/wood.png");
 }
-.paper{
-	background-image: url("../img/paperblack.jpg");
+.flowers{
+	background-image: url("../img/flowers.jpg");
 	background-repeat: inherit;
 }
 .contacts{
 	text-align: center;
-	background-color: rgba(0,0,0, 0.7);
+	background-color: rgba(0,0,0, 0.8);
+	color: white;
 }
 .contacts div{
 	display: inline-block;
