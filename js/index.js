@@ -1,7 +1,8 @@
 $(document).ready(function () {
-	
+	$(window).load(function() {
 	$("#body").fadeIn();
 	$("#loading").fadeOut();
+	});
 	$(".contacts img").mouseover(function() {playsong();});
 });
 
