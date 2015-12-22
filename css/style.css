@@ -20,11 +20,13 @@ body{
 }
 .drawing{
 	width: 100%;
-	display: none;
 }
 .drawingSection{
 	width: 100%;
 	max-width: 300px;
+}
+.sections{
+	display: none;
 }
 .section{
 	padding-bottom: 5%;

@@ -2,15 +2,16 @@ $(document).ready(function () {
 	
 	//screen the loading
 	$(window).load(function() {
-	$(".drawing").fadeIn();
+	$(".sections").fadeIn();
 	$("#loading").fadeOut();
+	//active wow.js 'scroll with animate.css'
+	new WOW().init();
 	});
 	
 	//play song when mouseover img contacts
 	$(".contacts img").mouseover(function() {playsong();});
 
-	//active wow.js 'scroll with animate.css'
-	new WOW().init();
+	
 });
 
 //function for play song
