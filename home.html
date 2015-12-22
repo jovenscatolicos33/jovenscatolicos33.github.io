@@ -4,12 +4,19 @@
 		<meta charset="UTF-8">
 		<title>Jovens Católicos 33</title>
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/index.js"></script>
 	</head>
 
 	<body>
-		<div>
+	<div id="loading">
+		<p class="loading animated bounce infinite">Jovens Católicos 33</br>Carregando...</p>
+	</div>
+	<div id="body">
+	<div>
 		<img class="drawing" src="img/drawing.png" style="width: 100%"/>
-		</div>
+	</div>
 		<div class="title">
 			<h1>Jovens Católicos 33</h1>
 			<h3>JC33</h3>
@@ -68,14 +75,14 @@
 				<div>
 					<table>
 					<tr><td>membros</td></tr>
-					<tr><td><img src="img/members.png"/></td></tr>
+					<tr><td><a href="members.html" target="_blank"><img src="img/members.png"/></a></td></tr>
 					</table>
 				</div>
 
 				<div>
 					<table>
 					<tr><td>cartilha</td></tr>
-					<tr><td><img src="img/cartilha.png"/></td></tr>
+					<tr><td><a href="booklet.html" target="_blank"><img src="img/booklet.png"/></a></td></tr>
 					</table>
 				</div>	
 			</div>
@@ -96,8 +103,8 @@
 						<li>Formação - quartas-feiras - 20h00</li>
 						<li>Missão Rua - quintas-feiras - 22h30</li>
 						<li>Missão Casa - domingos - 15h00</li>
-						<li>Missões festivas - Natal - Pascoa</li>
-						<li><a href="doacao.html" target="_blank">Seja um missionario ajudando o jc33 doando roupas, alimento, etc...</a></li>
+						<li>Missões Especiais - Natal - Pascoa - Retiros - etc.</li>
+						<li><a href="donation.html" target="_blank">Seja um missionario ajudando o jc33 doando roupas, alimento, etc...</a></li>
 					</ul>
 					</td>
 				</tr>
@@ -107,7 +114,7 @@
 		<div class="section">
 		<table>
 				<tr>
-					<td class="messenger"><div class="title"><h1>Adore</h1></div></td>
+					<td class="messenger"><div class="title"><h1>"Amai-o como ele é."</h1>(São Francisco de Assis)</div></td>
 					<td><img class="drawingSection" src="img/jesus.png"/></td>
 				</tr>
 			</table>
@@ -116,6 +123,8 @@
 		<!-- footer -->
 		<div class="clear footer">
 		Jovens Católicos 33, Passos - MG, 2015
+		</div>
+		<audio src="sound.mp3" id="sound" preload="auto"></audio>
 		</div>
 	</body>
 </html>
