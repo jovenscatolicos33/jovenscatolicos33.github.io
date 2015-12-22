@@ -19,7 +19,7 @@ body{
 	
 }
 .title{
-	padding: 10%;
+	padding: 5%;
 	text-align: center;
 }
 table{
@@ -28,7 +28,7 @@ table{
 .messenger{
 	padding: 5%;
 	width: 80%;
-	text-align: center;
+	text-align: left;
 }
 small{
 	text-align: right;
@@ -38,16 +38,22 @@ small{
 	color: black;
 	text-align: right;
 }
-.red{
-	background-color: red;
+.clear a:hover{
+	color: black;
+	text-decoration: underline; 
+}
+.paperold{
 	color: white;
 	text-align: left;
+	background-image: url("../img/paperold.png");
 }
 .paper{
 	background-image: url("../img/paperblack.jpg");
+	background-repeat: inherit;
 }
 .contacts{
 	text-align: center;
+	background-color: rgba(0,0,0, 0.7);
 }
 .contacts div{
 	display: inline-block;
@@ -62,7 +68,31 @@ small{
 	transition: all .2s ease-in;
 }
 .contacts img:hover{
-	 -webkit-transform: scale(1.1);
-     -ms-transform: scale(1.1);
-      transform: scale(1.1);
+	 -webkit-transform: scale(1.2);
+     -ms-transform: scale(1.2);
+      transform: scale(1.2);
+}
+.footer{
+	text-align: left;
+	vertical-align: middle;
+	font-family: arial;
+	font-size: 10pt;
+	padding: 20px;
+}
+.central{
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	font-size: 18pt;
+}
+.central img{
+	width: 60%;
+}
+a{
+	color: #aaaaaa;
+	text-decoration: none;
+}
+a:hover{
+	color: white;
+	text-decoration: underline; 
 }
