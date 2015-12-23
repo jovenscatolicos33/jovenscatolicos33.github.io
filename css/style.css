@@ -9,6 +9,7 @@ body{
 	color: white;
 	font-family: 'FontBody';
 	font-size: 25pt;
+	overflow-x: hidden;
 }
 #loading{
 	background-color: black;
@@ -17,6 +18,14 @@ body{
 	position: absolute;
 	text-align: center;
 	padding-top: 15%;
+}
+#loading p {
+	font-size: 12pt;
+	font-family: arial;
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	width: 50%;
 }
 .drawing{
 	width: 100%;
@@ -113,4 +122,14 @@ a{
 a:hover{
 	color: white;
 	text-decoration: underline; 
+}
+.scroll{
+	position: fixed;
+	margin: 1px;
+	right: 0pt;
+	bottom: 0pt;
+	text-align: right;
+}
+.scroll img{
+	width: 30%;
 }
