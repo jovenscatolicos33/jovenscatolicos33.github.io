@@ -1,0 +1,32 @@
+.members{
+	width: 80%;
+	text-align: left;
+	margin: auto;
+	
+}
+.members figure{
+	display: inline-block;
+	text-align: center;
+	font-size: 15pt;
+	position: relative;
+}
+.members img{
+	width: 150px;
+	border-radius: 100px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	-webkit-transition: all .3s ease-in;
+	-ms-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+
+}
+.members figure:hover img{
+	 -webkit-transform: scale(1.3);
+     -ms-transform: scale(1.3);
+      transform: scale(1.3);
+ }
+.members figcaption{
+	margin-top: 15px;
+ }
+
+
+
