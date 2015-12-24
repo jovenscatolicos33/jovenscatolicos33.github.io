@@ -1,15 +1,15 @@
+@font-face {
+	font-family: 'FontBody';
+	src: url("../fonts/Artbrush.ttf");
+}
 body{
 	background-color: #eee;
 	border: 0px;
 	margin: 0px;
 	overflow-x: hidden;
-}
-.top{
-	height: 100px;
-	background-image: url("../img/library.jpg");
-	color: white;
-	margin: 0px;
-	text-align: center;
+	font-family: 'FontBody';
+	background-image: url("../img/backbooklet.jpg");
+	font-size: 15pt;
 }
 .top h1{
 	margin: 0;
@@ -17,15 +17,26 @@ body{
 }
 .booklet{
 	font-family: arial;
-	font-size: 12pt;
-	width:90%;
-	max-width: 210mm;
+	font-size: 11pt;
+	width:45%;
 	margin: auto;
 	margin-top: 20px;
 	background-color: white;
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-	padding: 2%;
+	padding: 5%;
+	text-align: justify;
+
 }
+@media (max-width: 900px){
+ 	.booklet {
+ 		width:70%;
+ 	}
+ }
+ @media (max-width: 500px){
+ 	.booklet {
+ 		width:80%;
+ 	}
+ }
 .center {
 	text-align: center;
 }
@@ -33,6 +44,31 @@ body{
 	text-align: right;
 }
 .booklet img{
-	width: 90%;
-	max-width: 600px;
+	width: 70%;
+	max-width: 500px;
+	margin: auto;
 }
+.booklet a{
+	text-decoration: none;
+	color: gray;
+}
+.booklet a:hover{
+	color: black;
+}
+.summary ol>li{
+	font-weight: bold;
+}
+.scroll{
+	position: fixed;
+	margin: 1px;
+	right: 0pt;
+	bottom: 0pt;
+	text-align: right;
+}
+.scroll img{
+	width: 10%;
+}
+.scroll img:hover{
+	cursor: pointer;
+}
+

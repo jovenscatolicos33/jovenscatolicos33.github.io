@@ -4,23 +4,637 @@
 		<meta charset="UTF-8">
 		<title>Cartilha JC33</title>
 		<link rel="stylesheet" href="css/booklet.css">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+			<script type="text/javascript">// <![CDATA[
+			$(document).ready(function() {
+
+				//roll page to up
+				$("#up").click(function() {$('html, body').animate({scrollTop:700}, 'slow');});
+
+				function filterPath(string) {
+				return string
+				.replace(/^\//,'')
+				.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+				.replace(/\/$/,'');
+				}
+				$('a[href*=#]').each(function() {
+				if ( filterPath(location.pathname) == filterPath(this.pathname)
+				&& location.hostname == this.hostname
+				&& this.hash.replace(/#/,'') ) {
+				var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+				var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+				if ($target) {
+				var targetOffset = $target.offset().top;
+				$(this).click(function() {
+				$('html, body').animate({scrollTop: targetOffset}, 600);
+				return false;
+				});
+				}
+				}
+				});
+			});
+			// ]]></script>
+
 	</head>
 
 	<body>
-		<div class="top">
-			<h1>Cartilha JC</h1>
-		</div>
+		
+		<div class="center"><h1>Cartilha JC</h1></div>
+		
 		
 		<div class="booklet">
 			<div class="center"><img src="img/brasao.png"/></div>
-
 			<div class="rigth">
 			<p><br/>
-			<h3>DIRETRIZES E DIRECIONAMENTOS<br/> JOVENS CATÓLICOS 33</h3>
+			<h2>DIRETRIZES E DIRECIONAMENTOS<br/> JOVENS CATÓLICOS 33</h2>
 			</p>
 			</div>
 		</div>
 
-	
+		<div class="booklet summary">
+			<div class="center"><h2>Sumário</h2></div>
+			<ol>
+				<li><a href="#1">JOVENS CATÓLICOS 33</a></li>
+				<li><a href="#2">FRUTOS DO ESPÍRITO</a></li>
+				<li><a href="#3">A MÃE IGREJA</a></li>
+				<li><a href="#4">AMAR O PRÓXIMO COMO A TI MESMO</a></li>
+				<li><a href="#5">OBRAS DE MISERICÓRDIA</a></li>
+				<li><a href="#6">HISTÓRIA DOS JOVENS CATÓLICOS 33</a></li>
+				<li><a href="#7">CRUZ DA UNIDADE</a></li>
+					<ul>
+						<li>7.1<a href="#7.1"> HISTÓRIA DA CRUZ DA UNIDADE</a></li>
+						<li>7.2<a href="#7.2"> UNUM IN SANGUINE</a></li>
+					</ul>
+				<li><a href="#8">OS BENS DA IGREJA</a></li>
+				<li><a href="#9">MÃE RAINHA</a></li>
+				<li><a href="#10">DIRETRIZES E DIRECIONAMENTOS JOVENS CATÓLICOS 33</a></li>
+					<ul>
+						<li>10.1<a href="#10.1"> QUEM SOMOS NÓS?</a></li>
+						<li>10.2<a href="#10.2"> CARISMA</a></li>
+						<li>10.3<a href="#10.3"> BRASÃO</a></li>
+						<li>10.4<a href="#10.4"> OBEDIÊNCIA A SANTA IGREJA</a></li>
+					</ul>
+				<li><a href="#11">QUEM PODE ENTRAR NO GRUPO?</a></li>
+					<ul>
+						<li>11.1<a href="#11.1"> MEMBROS</a></li>
+						<li>11.2<a href="#11.2"> DIREITOS DOS MEMBROS</a></li>
+						<li>11.3<a href="#11.3"> OBRIGAÇÕES DOS MEMBROS</a></li>
+						<li>11.4<a href="#11.4"> GRADUAÇÃO DO MEMBRO (CRUZ DA UNIDADE)</a></li>
+					</ul>
+				<li><a href="#12">FORMAÇÃO E ESPIRITUALIDADE</a></li>
+					<ul>
+						<li>12.1<a href="#12.1"> COMO É FEITO A REUNIÃO DE FORMAÇÃO?</a></li>
+						<li>12.2<a href="#12.2"> POR QUEM?</a></li>
+						<li>12.3<a href="#12.3"> 12.3. COMO SERÃO OS RETIROS?</a></li>
+					</ul>
+				<li><a href="#13">NÚCLEO</a></li>
+					<ul>
+						<li>13.1<a href="#13.1"> COMO SERÁ FEITO O NÚCLEO?</a></li>
+						<li>13.2<a href="#13.2"> QUEM PARTICIPA DO NÚCLEO?</a></li>
+					</ul>
+				<li><a href="#14">REUNIÃO</a></li>
+				<li><a href="#15">MISSÃO</a></li>
+					<ul>
+						<li>15.1<a href="#15.1"> MISSÃO RUA</a></li>
+						<li>15.2<a href="#15.2"> MISSÃO SOCIAL</a></li>
+						<li>15.3<a href="#15.3"> MISSÃO CASA</a></li>
+					</ul>
+				<li><a href="#16">COORDENAÇÃO</a></li>
+					<ul>
+						<li>16.1<a href="#16.1"> COORDENADOR GERAL</a></li>
+							<ul>
+								<li>16.1.1<a href="#16.1.1"> OBRIGAÇÕES</a></li>
+								<li>16.1.2<a href="#16.1.2"> REQUISITOS PARA COORDENAÇÃO</a></li>
+								<li>16.1.3<a href="#16.1.3"> MOTIVOS QUE DÃO DIREITO A TROCA DE COORDENAÇÃO</a></li>
+							</ul>
+						<li>16.2<a href="#16.2"> COORDENAÇÃO DE MISSÕES</a></li>
+						<li>16.3<a href="#16.3"> COORDENADOR DA MISSÃO CASA</a></li>
+						<li>16.4<a href="#16.4"> COORDENADOR DA MISSÃO RUA</a></li>
+						<li>16.5<a href="#16.5"> COORDENADOR DA MISSÃO SOCIAL</a></li>
+						<li>16.6<a href="#16.6"> COORDENADOR DA FORMAÇÃO E ESPIRITUALIDADE</a></li>
+						<li>16.7<a href="#16.7"> COORDENADOR DO CAIXA</a></li>
+					</ul>
+				<li><a href="#17">FINALIZAÇÃO</a></li>
+			</ol>
+		</div>
+
+		<div class="booklet">
+
+			<h3 id="1">1. JOVENS CATÓLICOS 33</h3>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Jovens Católicos 33 é um Grupo de Jovens, que tem por objetivo fazer a caridade. Acreditamos que a caridade é o próprio Deus, como diz São João (o discípulo amado de Jesus), “Aquele que não faz caridade não conhece a Deus, porque Deus é caridade” – 1 João 4;8.</p>
+			
+		
+			<h3 id="2">2. FRUTOS DO ESPÍRITO</h3>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Quando se dá abertura a ação do Espírito de amor em nosso interior, refletimos o amor de cristo no exterior. Sabe se que a caridade é um fruto do Espírito Santo, São Paulo numa de suas epístolas descreve; “mas o fruto do Espírito é: caridade, alegria, paz, paciência, afabilidade, bondade, fidelidade, brandura, temperança”. – Gálatas 5,22-23.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Sabemos que a Igreja de Cristo, isto é, a Igreja Católica Apostólica Romana é a Mãe da Caridade. Como somos dela temos que a honrá-la. “uma árvore boa não dá frutos maus,<i>"uma árvore má não dá bom fruto. Porquanto cada árvore se conhece pelo seu fruto...”</i> – São Lucas 6,43-44.</p>
+
+
+			<h3 id="3">3. A MÃE IGREJA</h3>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp; A Igreja nos ensinou a fazer a caridade desde criança. Educou-nos fielmente no mandamento de Jesus Cristo nosso Senhor, que dissera aos escribas, <i>“o primeiro de todos os mandamentos é este: ouve, Israel, o Senhor nosso Deus é o único Senhor; amarás ao Senhor teu Deus de todo o teu coração, de toda a tua alma, de todo o teu espírito e de todas as tuas forças. Eis aqui o segundo mandamento: amarás o teu próximo como a ti mesmo. Outro mandamento maior do que estes não existe.”</i> – São Marcos 12;19-31.</p>
+
+		</div>
+
+		<div class="booklet">
+			<h3 id="4">4. AMAR O PRÓXIMO COMO A TI MESMO</h3>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp; Um mandamento que exige muito de nós, temos que ser outros cristos como São Paulo disse, <i>“sede meus imitadores, como eu o sou de Cristo! Reverencia na adoração.”</i> – 1 Coríntios 11,1.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;São Josemaria Escrivá, escreve; <i>“que cada um sinta a urgência divina de ser outro Cristo, ispe Christus, o próprio Cristo...”</i></p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Jesus Cristo que é Senhor disse: <i>“em verdade em verdade vos digo: aquele que crê em mim fará também as obras que eu faço, e fará ainda maiores do que estas, porque vou para junto do Pai.”</i>- São João 14;12.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;É uma urgência ser outro Cristo, amar e amar. Perdoar e perdoar.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Buscar na letra do Padre Zezinho uma inspiração:</p>
+
+			<i>“amar como Jesus amou. Sonhar como Jesus sonhou. Pensar como Jesus pensou. Viver como Jesus viveu. Sentir o que Jesus sentia. Sorrir como Jesus sorria. E ao chegar ao fim do dia eu sei que eu dormiria muito mais feliz.”</i>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Os membros dos Jovens Católicos são obrigados a si amarem, porque sabemos que não podemos dar aquilo que não temos. Amar a si mesmo é regra de vida. Jesus nos dá este novo mandamento: <i>“amai-vos uns aos outros. Como eu vos tenho amado, assim também vós deveis amar-vos uns aos outros”</i>. – São João 13;34.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Amar como Jesus amou é um exercício profundo, uma verdadeira experiência introversiva e mística. Um esforço que nunca se extingue, pois, Deus é quem dá a força. O dom. Não conseguimos de Forma alguma fazer nada de bom sem o auxilio do Criador. Por isso nas palavras de São Tiago debruçamos nossas esperanças; <i>“Toda dádiva boa e todo dom perfeito vêm de cima: descem do Pai das Luzes, no qual não mudança, nem mesmo aparência de instabilidade.”</i> – São Tiago 1;17.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A ação de Deus em nós na pessoa do Espírito Santo é evidente no tocante; boas obras.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Beatíssima Helena Guerra disse; <i>“O Espírito Santo é a tua vida e tu não podes fazer nada de bom sem Ele.”</i></p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Amar o próximo um ato que nos santifica. Fazer a caridade é multiplicá-la. O amor quando partilhado ele não diminui, muito pelo contrário, ele cresce. </p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Como amar o próximo quando este é indiferente a nós?</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Quando este está; sujo, fedido, despido, ferido, embriagado, drogado...</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Nos nossos tempos as pessoas dizem que este empreendimento não prospera muito não, tempos de status, de aparência, de ostentação, de ter, de poder financeiro...</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;As pessoas estão descartando umas as outras, como se fossem uma peça de roupa inutilizável. </p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;As pessoas estão mais egoístas, auto-suficientes, fechadas em si, anti-sociais...</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A sociedade nos oprime, nos engessa, nos limita a decidir por ser maus. Mas quando comungamos das palavras do Mestre nos fartamos; <i>“Não peço que os tires do mundo, mas sim que os preserves do mal. Eles não são do mundo, como também eu não sou do mundo.”</i> – São João 17,14-15.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;O meio nos envolve, e nos força a tomar decisões. Mas não somos desse meio (mundo), somos de outro meio (Céu).</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;E São João o discípulo da caridade nos ensina em sua epistola;  </p>
+
+			<i>“Se alguém disser: amo a Deus, mas odeia seu irmão, é mentiroso. Porque aquele que não ama seu irmão, a quem vê, é incapaz de amar a Deus, a quem não vê.”</i> – 1 São João 4;20.
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Amar ao próximo é uma urgência evangélica. A caridade é o centro da boa notícia, é também um movimento de amor entre dois ou mais filhos de Deus, que é próprio amor.</p>
+
+			<i>“A fé é o fundamento da esperança, é uma certeza a respeito do que não se vê.”</i> – Hebreus 11,1.
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Amar pela fé. Ter fé por amar. Uma relação intrínseca, que lança fora toda mentira e ódio.
+			Santo Agostinho de Hipona definia nosso amor por Deus assim;</p>
+
+			<i>"Um conflito entre dois amores: o amor de Deus impelido até o desprezo do amor de si." ou "o amor de si impelido até o desprezo do amor de Deus".</i>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Os membros dos Jovens Católicos 33 são obrigados a amar o próximo, de ver Deus nos irmãos. Esse é marco zero, ou melhor, ponto de onde emana nosso carisma; a caridade.</p>
+		</div>
+
+		<div class="booklet">
+				<h3 id="5">5. OBRAS DE MISERICÓRDIA</h3>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os Jovens Católicos 33 sendo grupo caritativo quer praticar as obras de misericórdia, pois se sabe que as mesmas são passos firmes na fé.</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Solicitadas por São Pio X que está descrita em seu catecismo são:
+				</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;As obras de misericórdia corporais são:
+				<ol>
+					<li>ª Dar de comer a quem tem fome;</li>
+					<li>ª Dar de beber a quem tem sede;</li>
+					<li>ª Vestir os nus;</li>
+					<li>ª Dar pousada aos peregrinos;</li>
+					<li>ª Assistir aos enfermos;</li>
+					<li>ª Visitar os presos;</li>
+					<li>ª Enterrar os mortos.</li>
+				</ol>
+				</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;As obras de misericórdia espirituais são:
+				<ol>
+					<li>ª Dar bom conselho;</li>
+					<li>ª Ensinar os ignorantes;</li>
+					<li>ª Corrigir os que erram;</li>
+					<li>ª Consolar os aflitos;</li>
+					<li>ª Perdoar as injúrias;</li>
+					<li>ª Sofrer com paciência as fraquezas do nosso próximo;</li>
+					<li>ª Rogar a Deus por vivos e defuntos.</li>
+				</ol>
+				</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Sabe se que as boas obras acompanham aqueles que têm fé no Cristo. <i>“Porquanto cada árvore se conhece pelo seu fruto...”</i> – São Lucas 6,44.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;O fruto da fé é gerado nas obras. O que entendemos por obra? A Obra é o produto de um trabalho. O resultado de um serviço. Aqueles que crêem em Jesus realizam obras semelhantes às dele. Não tem como comprovar pelas palavras, somente pelos nossos atos é que se pode dizer este ou aquele é de Jesus Cristo. Quais eram as obras de Jesus? Jesus nos ensinou a linguagem do amor, ele nos anunciou o Reino do amor. São Tiago nos testifica a verdadeira ligação entre Cristo e os cristãos;</p>
+
+				<i>“a religião pura e sem mácula aos olhos de Deus e nosso Pai é esta: visitar os órfãos e as viúvas nas suas aflições, e conservar-se puro da corrupção deste mundo.”</i> – São Tiago 1; 27.
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Jesus fez essas três coisas que São Tiago nos indica.</p>
+				<p>
+						<ol>
+						<li>Visitar os órfãos</li>
+						<li>Visitar as viúvas nas suas aflições</li>
+						<li>Conservar-se puro da corrupção deste mundo.</li>
+						</ol>
+				</p>
+
+				<i>“É o Espírito da verdade, que o mundo não pode receber, porque não vê nem o conhece, mas vós o conheceis, porque permanecerá convosco e estará em vós. Não voa deixareis órfãos. Voltarei a vós.”</i> – São João 14,17-18.
+				
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Jesus deixa bem claro que não os deixaria sozinhos, desamparado, desvalido e sem proteção.
+				Para os órfãos Jesus manda o consolador que por sua vez traz alívio e conforto.</p>
+
+				<i>“exaltado pela direita de Deus, havendo recebido do Pai o Espírito Santo prometido, derramou-o como vós vedes e ouvis.”</i> - Atos 2;33.
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Jesus Cristo promete e cumpre, nuca nos deixou sozinhos e nunca deixará.</p>
+
+				<i>“bendito seja Deus, Pai de nosso Senhor Jesus Cristo, que do alto do céu nos abençoou com toda benção espiritual em Cristo, e nos escolheu nele antes da criação do mundo, para sermos santos e irrepreensíveis, diante de seus olhos. No seu amor nos predestinou para sermos adotados como filhos seus por Jesus Cristo, segundo o beneplácito de sua livre vontade, para fazer resplandecer a sua maravilhosa graça, que nos foi concedida por ele no bem-amado.”</i> – Efésios 1,3-6.
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Esta passagem mostra que nós somos filhos adotados por causa de Jesus Cristo, fomos comprados na redenção de seu santo sangue. Somos filho no filho.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;E Jesus categoricamente diz; <i>“eis que estou convosco todos os dias, até o fim do mundo.”</i> – Mateus 28,20b.
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Quanto às viúvas, mulheres a quem morreram seus maridos e que ainda não contraíram ainda novas núpcias.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Jesus tem um carinho especial por todos. Na sagrada escritura pode se ver a passagem da viúva de Naim. – Lucas 7;11-15. Aquela mulher perdera o marido e estava a perder seu filho, <i>“logo que o Senhor a viu compadeceu-se dela, e disse-lhe: não chores.”</i></p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Compadecer-se é ter compaixão de alguém, é sofrer com a pessoa que sofre. Jesus é o bom pastor que sofre as feridas de cada uma de suas ovelhinhas.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Outra passagem Jesus lança seu olhar caridoso para a oferta da viúva pobre; <i>“Jesus sentou-se defronte do cofre de esmola e observava como o povo deitava dinheiro nele; muitos ricos depositavam grandes quantias. Chegando uma pobre viúva, lançou duas pequenas moedas, no valor de apenas um quadrante. E ele chamou os seus discípulos e disse-lhes: em verdade vos digo: esta pobre viúva deitou mais do que todos os que lançaram no cofre, porque todos deitaram do que tinham em abundância; esta, porém, pôs, da sua indigência, tudo o que tinha para seu sustento.”</i> – São Marcos 12,41-44.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Além de ela ser pobre foi capaz de dar tudo o que lhe faltava.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Vale à pena remoer o verso quando o mestre diz: <i>“Ele chamou os seus discípulos e disse-lhes”</i>. Que privilégio teve aqueles <i>“alunos”.</i>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Tanto é que eles aprenderam muito com o mestre. Em Atos lemos como praticara os ensinamentos, como seguiam as doutrinas de Jesus.</p>
+
+				<i>“Naqueles dias, como crescesse o número dos discípulos, houve queixas dos gregos contra os hebreus, porque as suas viúvas teriam sido negligenciadas na distribuição diária. Por isso, os doze convocaram uma reunião dos discípulos...”</i> – Atos 6;1-2.
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Quando surgiu este problema citado no verso acima, eles sabiam muito bem como lhe dar com o caso; “não é razoável que abandonemos a palavras de Deus, para administrar.</p>
+
+		</div>
+
+		<div class="booklet">
+			<h3 id="6">6. HISTÓRIA DOS JOVENS CATÓLICOS 33</h3>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;No dia 28 de agosto de 2014, quinta-feira, três jovens: Luiz Felipe Lara Ávila, Murilo Prudêncio e Ingrid estavam reunidos para rezar para a Ingrid, na casa dela, que por sua vez ia pregar no – (GOPA) “Grupo de Oração Paulo Apostolo” (esse grupo foi inventado dentro da formação Paulo Apostolo unicamente para ser executado na manhã do dia 30/08/2014) do Grupo de Oração JUSA – (JOVENS UNIDOS A SERVIÇO DO AMOR) do qual todos os três fazem parte. Naquele dia o Espírito Santo estavam se movendo na vida deles, e fez nascer em seus corações uma semente chamada “caridade”. Iniciaram se então uma conversa muito básica a respeito de caridade, foi suscitado naquele momento que eles tinham que fazer alguma coisa no dia das crianças 12/10/2014. (dia de Nossa Senhora da Conceição Aparecida).</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Após este suscitar do Espírito Santo, muitas outras obras caritativas foram aprovadas. Outras pessoas foram ingressando no grupo, dando um corpo mais robusto e sendo assim mais notável.</p>
+		</div>
+		
+		<div class="booklet">
+			<h3 id="7">7. CRUZ DA UNIDADE</h3>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A cruz da unidade é aonde encontramos nosso consolo. Nela encontramos também o sinal que melhor nos expressam. Buscamos nas palavras de São Paulo uma significação, que seria melhor citá-la; <i>“Reunidos num só corpo pela virtude da cruz, aniquilando nela a inimizade.”</i> – Efésios 2;16b.</p>
+			<div class="center"><img src="img/cruzunidade.png"/></div>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A vinculação entre Cristo e Maria, em Schoenstatt, está expressa na Cruz da Unidade.</p>
+		</div>
+
+		<div class="booklet">
+			<h4 id="7.1">7.1 HISTÓRIA DA CRUZ DA UNIDADE</h4>
+
+			<p><i>Quando os estudantes pallottinos, da  primeira geração do Chile, estavam para serem ordenados sacerdotes, nasceu entre eles o desejo de presentear ao Santuário de Bellavista – lugar que viu nascer e alimentou sua vocação – um crucifixo que expressasse a imagem de Cristo sacerdote, tal como desejavam vivê-lo, a partir da Aliança de Amor com Maria e à luz da imagem original de Cristo que o Fundador lhes transmitia. O pensamento central que quiseram expressar foi o Cristo dos vínculos. É o Cristo que, na força do Espírito Santo está profunda e intimamente vinculado como  Filho ao Pai. É o Cristo que está profunda e intimamente vinculado a Maria, sua Mãe, constituída como colaboradora e companheira permanente em sua missão redentora entre os homens. É o Cristo da Unidade, que une o céu e a terra; é o Cristo Bom Pastor que, refletindo o amor do Pai, une os homens a Deus e os homens entre si, fazendo-os filhos de um mesmo Pai. Na parte de trás dessa cruz gravaram as frases latinas que expressam os ideais e realidade: “Unum in saguine  (Unidos no Sangue de Cristo) + Tua res agitur (Trata-se de tua obra redentora) + Clarifica te (Glorifica-te em nossa pequenez e frauqeza)”.</p>
+
+			<p>A frase latina “Unum in sanguine” era o ideal da geração sacerdotal, que expressa a solidariedade de destinos que os unia com Cristo e Maria, com o Fundador e entre eles. Devido às dificuldades internas da Família de Schoenstatt, o Fundador sendo afastado pelo exílio, a cruz tornou-se providencialmente atual, já que experimentam que a plena unidade entre eles seria alcançada somente em uma adesão crente à pessoa do Pai Fundador, pois, sendo fiéis a ele, eram fiéis à fundação que, por meio dele, Deus havia realizado. Família alcançou a graça da unidade com ele, como Pai Fundador, perscrutando os planos de Deus e não orientando-se por simpatias ou por critérios puramente humanos.</i></p>
+		</div>
+
+		<div class="booklet">
+			<h4 id="7.2">7.2 UNUM IN SANGUINE</h4>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Unidos no sangue de Cristo, se transformou num cumprimento entre os membros. Quando nos encontramos após a saudação <i>“Paz de Cristo”</i> dizemos; <i>“UNUM IN SANGUINE”.</i></p>
+
+			<i>“por intermédio daquele que, ao preço do próprio sangue na cruz, restabeleceu a paz a tudo quanto existe na terra e nos céus.”</i> – Colossenses 1;20.
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Somos membros de cristo, somos um em cristo. Sendo assim, podemos dizer sem errar que somos também do mesmo sangue. <i>“porque fostes comprados por um grande preço.”</i> - 1 Coríntios 6;20. </p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Nosso chamado foi para levar a virtude da caridade que emana da cruz. Virtude esta que nos faz irmãos, independente do que for. Nossas diferenças foram reparadas por Cristo.</p>
+
+			<i>“Aliás, conforme a lei, o sangue é utilizado, para quase todas as purificações, e sem efusão de sangue não há perdão”.</i> – Hebreus 9;22.
+			
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Verdadeiramente fomos purificados e perdoados pelo sangue redentor de Jesus Cristo. </p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Quando aproximarmos de qualquer que seja a pessoa não podemos encontrar barreiras como; descriminação pelo medo, pelo mau cheiro ou por vergonha de ser visto com a mesma. No tocante mendigo, transeunte, morador de rua, tratemo-los religiosamente cada qual com; amor, carinho e afeto. Somos irmão na pobreza e na riqueza.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Todavia entendidos que fomos comprados por alto preço. Somos propriedades de Deus em Cristo e que temos muita valia pra Deus. Embora nos sintamos indignos. Salta aos nossos olhos os versículos do livro do profeta; <i>“dou o Egito por teu resgate, a Etiópia e Sabá em compensação. Porque és precioso a meus olhos, porque  eu te aprecio e te amo, pemuto reinos por ti, entrego nações em troca de ti”</i> - Isaías 43,3-4.</p>
+
+		</div>
+
+		<div class="booklet">
+			<h3 id="8">8. OS BENS DA IGREJA</h3>
+
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;São Lourenço, santo diácono da Igreja e mártir. Evidencia-nos os bens da Igreja Católica.</p>
+
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;O imperador exigiu que a Igreja lhe entregasse todos os seus bens, dentro de 3 dias. Vencido o prazo, São Lourenço apresentou os pobres que eram acudidos pela Igreja e disse ao imperador: Estes são os bens da Igreja. Valeriano, então, com muita raiva, ordenou que Lourenço fosse queimado vivo.</p>
+		</div>
+
+		<div class="booklet">
+			<h3 id="9">9. MÃE RAINHA</h3>
+
+			<p><i>“Quem não admira a grandeza de Maria não sabe o quanto Deus é grande!”</i> (São Pedro Crisólito)</p>
+
+			<div class="center"><img src="img/maerainda.jpg"/></div>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Na cruz da unidade vemos a figura de Maria de uma maneira extraordinária, recolhendo o sangue precioso de nosso Senhor Jesus Cristo. Maria está aos pés da cruz e do alto dela Cristo entrega sua mãe ao discípulo, dizendo; <i>“Eis aí tua mãe. E dessa hora em diante o discípulo a levou para sua casa”</i> – São João 19;27. Na cruz das vinculações assim também intitulada, vemos o Cristo que está profunda e intimamente vinculado a Maria, sua Mãe, constituída como colaboradora e companheira permanente em sua missão redentora entre os homens.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Sendo assim, para fomentar a devoção a esta querida mãe foi implantado no grupo a devoção a Mãe Peregrina, intitulada também como Mãe, Rainha Três Vezes Admirável de Schoenstatt. A capela da Mãe Rainha peregrina entre nós e entre algumas casas que acolhe a “Missão Casa”.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Como piedosos católicos, devemos propagar a devoção a nossa querida mãezinha do céu.</p>
+		</div>
+
+		<div class="booklet">
+			<h3 id="10">10. DIRETRIZES E DIRECIONAMENTOS JOVENS CATÓLICOS 33</h3>
+
+				<h4 id ="10.1">10.1. QUEM SOMOS NÓS?</h4>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os jovens católicos 33 é uma missão de caridade e evangelização, um grupo de jovens que expressam em obras caritativas sua fé e através do anuncio do evangelho resgatar as almas que estão se perdendo nos prazeres do mundo.</p>
+
+				<h4 id ="10.2">10.2. CARISMA</h4>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Carisma é a graça que Deus concede a seus filhos para que eles desenvolvam obras específicas dentro do Corpo Místico. É uma autoridade na qual Deus nos reveste para servir ao próximo. É uma fonte que Deus faz jorrar dentro do nosso coração, que por sua vez, deságua no coração do outro.</p>
+				
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;O Carisma dos <i>“Jovens Católicos 33”</i> é a caridade. Caridade é um movimento de amor, vontade de fazer o bem que nos remete aos irmãos. Caridade é o centro do anúncio de todo evangelho, sem a mesma não se consegue propagar o reino de amor inaugurado por nosso mestre e Senhor Jesus Cristo. A Caridade faz brotar em nossas almas um vínculo profundo com os pobres. Portanto temos uma satisfação a ser correspondida, que por sua vez, é nos unir aos mais humildes e necessitados.</p> 
+				
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os <i>“Jovens Católicos 33”</i> tem um chamado a ser respondido. Esse chamado é resgatar as almas para a mãe Igreja. Assim como Cristo nos resgatou queremos resgatar pessoas para ele. <i>“Ninguém tem maior caridade do que aquele que dá a sua vida por seus amigos”</i> – S. João 15;13. Jesus Cristo perdeu sua vida para ganhar a nossa. O sangue redentor foi à paga de nosso resgate. Toda nossa dívida foi quitada. Jesus nos ensina dizendo: <i>“amarás o teu próximo como a ti mesmo”</i> – São Marcos 12; 31. Neste verso podemos ver a profundidade do que é essencial para o cristão: amar e perdoar, amar e se doar.</p>
+				
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;A caridade é o sacrifício de si pela causa de Jesus. No Reino da caridade perder é ganhar. 
+				<i>“Se alguém quiser vir comigo, renuncie-se a si mesmo, tome sua cruz e siga-me. Porque aquele que quiser salvar a sua vida, perdê-la-á; mas aquele que tiver sacrificado a sua vida por minha causa, recobrá-la-á”</i> – São Mateus 16, 24-25. O apostolo São Paulo entendeu isso dizendo: <i>“Na realidade, pela fé eu morri para a lei, a fim de viver para Deus. Estou pregado à cruz de Cristo. Eu vivo, mas já não sou eu; é Cristo que vive em mim. A minha vida presente, na carne, eu a vivo na fé no Filho de Deus, que me amou e se entregou por mim”</i> – Gálatas 2: 19-20.</p>
+
+		</div>
+
+		<div class="booklet">
+			<h4 id ="10.3">10.3. BRASÃO</h4>
+
+			<div class="center"><img src="img/brasao.png"/></div>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A imagem acima representa o Brasão “Jovens Católicos 33”, sendo que cada símbolo possui um significado. O brasão foi desenvolvido em meados de março de 2015, onde começou a sofrer algumas alterações de cores e formatos, até chegar nesta arte que é atualmente o brasão oficial. Durante as alterações, era apresentado aos membros e se solicitava novas ideias, porem só foi apresentado em público como brasão definitivo em 29 de março de 2015. Segue imagem com explicação detalhada.</p>
+
+			<div class="center">
+				<figure>
+					<a href="img/brasaoabout.jpg"><img src="img/brasaoabout.jpg" target="_blank"/></a>
+					<figcaption>Clique na imagem para ampliar</figcaption>
+				</figure>
+			</div>
+
+			<h4 id ="10.4">10.4. OBEDIÊNCIA A SANTA IGREJA</h4>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Por conta dos “Jovens Católicos 33” serem ligados e terem um foco em levar pessoas para a Santa I.C.A.R.. Queremos sempre nos manter em unidade com a mesma, por isso temos e devemos obediência às autoridades da Santa Igreja, em especial o nosso Pároco, onde todas as ordens dadas por ele serão acatadas, mesmo que infelizmente não venha a nos favorecer.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Nós estamos sempre ligados a videira verdadeira, a Santa Igreja, sempre que alguma autoridade da Igreja solicitar uma reunião ou uma conversa, sobre a missão ou qualquer outro assunto, estaremos dispostos a encontrá-lo para conversar, dizer nossa opinião e acatar tudo o que ele irá nos passar.</p>
+
+		</div>
+
+		<div class="booklet">
+			
+		<h3 id="11">11. QUEM PODE ENTRAR NO GRUPO?</h3>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Entrada no grupo: todas as pessoas estão aptas a entrar no grupo. Exceto aquelas pessoas que não compartilharem do <i>“carisma”</i>.</p>
+
+				<h4 id ="11.1">11.1. MEMBROS</h4>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os membros deverão dar exemplo, indo na santa missa dominical, (não podendo nunca faltar da mesma, somente por motivos maiores), a missa é o ponto maior dos <i>“jovens católicos 33”</i>, é orientado nunca faltar, e também se possível ir à missa diária, é orientado a confissão mensal,  é sugerido diariamente  a oração do santo terço e a leitura orante da Sagrada Escritura, é orientado a fazer jejum nas quarta e sextas feiras, pelo menos uma hora de  adoração eucarística semanal. Após a participação em 5 missões, o coordenador geral terá uma conversa com o membro. Perguntando <i>“se o mesmo gostou das missões e se deseja continuar?”</i>. Caso a resposta seja positiva, o membro ganhará uma cruz da unidade, de acordo com a graduação avaliada pelo coordenador, na qual será tratada no tópico 11.4., e a partir de então precisará seguir as obrigações impostas pela missão (tópico 11.3.).</p>
+
+				<h4 id ="11.2">11.2. DIREITOS DOS MEMBROS</h4>
+				<ol>
+					<li>Sugerir novas ideias;</li>
+					<li>Participar de todas as reuniões;</li>
+					<li>Participar de todas as missões, salvo missões de risco com restrições;</li>
+					<li>Participar de todas as formações;</li>
+					<li>De receber um crucifixo da unidade quando o mesmo estiver apto.</li>
+					<li>Entrar para o grupo OFICIAL do “WhatsApp” após ter participado de 5 missões e decidir por viver o carisma da missão.</li>
+					<li>Pedir uma reavaliação da Graduação Espiritual.</li>
+				</ol>
+
+				<h4 id ="11.3">11.3. OBRIGAÇÕES DOS MEMBROS</h4>
+				<ol>
+					<li>Ter frequência nas atividades do grupo;</li>
+					<li>Obediência aos comandos do Coordenador Geral;</li>
+					<li>Viver o carisma do grupo;</li>
+					<li>Acolher de maneira única todos os novos integrantes;</li>
+					<li>Manter a unidade sempre, respeitando o outro membro independente da graduação.</li>
+				</ol>
+
+				<h4 id ="11.4">11.4. GRADUAÇÃO DO MEMBRO (CRUZ DA UNIDADE)</h4>
+
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;A graduação do membro acontecerá para marcar as etapas de suas evoluções dentro do grupo. Caberá aos coordenadores de missão e formação junto com o coordenador geral avaliar se poderá ser feito a troca simbólica da cruz da unidade de cada membro.</p>
+
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;A graduação somente será trocada assim que houver uma grande evolução do membro espiritualmente, o membro deve respeitar a decisão do coordenador geral e do coordenador de formação e espiritualidade, quanto a avaliação definida.</p>
+
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;A graduação será entregue e apresentada publicamente antes do Núcleo ou Reunião.</p>
+
+					<ul>
+						<li><b>Cruz da unidade amarela pequena:</b> poderá participar de todas as missões, mas não conduzirá momentos. Visando o cuidado de cada membro espiritualmente. </li>
+						<li><b>Cruz da unidade prata pequena:</b> estará apto a conduzir momentos na missão como: realizar orações prontas, espontâneas.</li>
+						<li><b>Cruz da unidade prata média:</b> estará apto a conduzir momentos na missão como: realizar orações prontas, espontâneas e “pregar a palavra”. O uso da mesma confere ao membro a aptidão de ser eleito coordenador geral quando houver a eleição anual ou de alguma das missões realizada pelo grupo. </li>
+					</ul>
+		</div>
+
+		<div class="booklet">
+			<h3 id="12">12. FORMAÇÃO E ESPIRITUALIDADE</h3>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A formação e Espiritualidade é o setor responsável pela preparação de cada membro, e é também o alimento que dá força e conhecimento para que apresentemos com mais segurança o anuncio do evangelho.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Inicialmente é explicado aos novos membros o que o <i>“Jovens Católicos 33”</i> é e faz. E claro, são feitas outras formações mais aprofundadas como: sobre a Santa Igreja, documentos da Igreja, estudo bíblico, leitura de livros de autores Católicos, histórias de santos, etc.</p>
+
+			<h4 id ="12.1">12.1. COMO É FEITO A REUNIÃO DE FORMAÇÃO?</h4>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Todas as reuniões de formação serão feitas semanalmente, ou em retiros realizados no final de semana.</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Elas são feitas das seguintes formas; com um dos formadores conduzindo-as ou mesmo com as aplicações de vídeos e áudios.</p>
+
+			<h4 id ="12.2">12.2. POR QUEM?</h4>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Pelo membro coordenador da formação, ou por outra pessoa designada pelo mesmo.</p>
+
+			<h4 id ="12.3">12.3. COMO SERÃO OS RETIROS?</h4>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Serão feitos aos finais de semana, marcados antecipadamente em oração. Haverá dois retiros anualmente, podendo ser de formação e de reabastecimento. Também no retiro haverá louvores e pregações. Sendo cada pregação vinculada a um santo da Igreja. (Também poderá ser feito um retiro quando houver outras necessidades).</p>
+
+		</div>
+
+		<div class="booklet">
+			<h3 id="13">13. NÚCLEO</h3>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;O núcleo será feito semanalmente, visando o êxito de todas as missões dos “jovens católicos 33”.</p>
+
+
+			<h4 id ="13.1">13.1. COMO SERÁ FEITO O NÚCLEO?</h4>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Da seguinte forma: com a presença de pelo menos três membros, onde reunirão e entrarão em oração profunda, aberto aos direcionamentos suscitados pelo Espírito Santo.</p>
+
+			<h4 id ="13.2">13.2. QUEM PARTICIPA DO NÚCLEO?</h4>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Todos estão aptos a estarem no núcleo, porém terão que fazer a formação a respeito do núcleo. 
+			(esta formação será passada pelo coordenador da formação)
+			É obrigatório ter esta formação para participar do núcleo.</p>
+
+			<h3 id="14">14. REUNIÃO</h3>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;É obrigação do COORDENADOR GERAL, organizar uma reunião semanalmente que acontecerá nos domingos as 20:30 sendo aberta e indicada a todos os membros, no qual será tratada diversos assuntos.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Para a reunião não é necessário a formação de núcleo.</p>
+
+
+		</div>
+
+		<div class="booklet">
+			<h3 id="15">15. MISSÃO</h3>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Os <i>“Jovens Católicos 33”</i> conta com diversos tipos de missões, e cada missão possui uma coordenação, na qual o coordenador de missão tem por obrigação incentivar e fazer com que a missão venha acontecer.</p>
+
+			<h4 id ="15.1">15.1.  MISSÃO RUA</h4>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;<i>“Missão Rua”</i> é a nossa missão por excelência, onde visamos fazer a Caridade, reunimos semanalmente com intuito de levar um <i>“café”</i> aos moradores de rua, conversar com eles, louvar a Deus, sorrir e chorar juntos e entender a vida de cada um de maneira exclusiva, dedicando a eles todo tempo. </p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Durante as missões nós tentamos entender os <i>“porquês”</i>, queremos saber (porque eles estão ali, se não possuem família, o que aconteceu para que ele se afastasse da família, porque não voltar pra família, entre outras perguntas) Não forçamos nada, mas de acordo com as respostas oferecidas, vamos fazer de tudo para dar uma vida melhor a ele, onde entra o papel da <i>“Missão Social”</i> que será tratada no próximo tópico.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Restrições: Menores de 18 anos, exceto com autorização do responsável.</p>
+
+			<h4 id ="15.2">15.2.  MISSÃO SOCIAL</h4>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A Missão Social busca dar uma vida nova as pessoas que necessitam de ajuda, esta missão é distribuída a todos os membros. Ex: Durante alguma missão foi encontrado um alcoólatra que deseja internação, então o coordenador da missão social liderará mais uma missão para conseguirmos interná-lo. E assim será em todas as missões, se precisar de fraldas, medicamentos, alimentos, internação, agasalhos, voltar pra família ou qualquer serviço social para uma vida digna nós correremos atrás.</p>
+
+
+			<h4 id ="15.3">15.3.  MISSÃO CASA</h4>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Missão Casa visa ir à casa de pessoas que solicitam a nossa ajuda. Durante a visita acontecerá uma reunião de oração, de acordo com o que foi passado pelo núcleo de oração.  A reunião nesta casa deverá conter momentos como: Louvor, Pregação. Cujo foco desta missão é levá-las novamente para a Santa Igreja.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;A Missão Casa é aberta para a participação de todos os membros, salvo quando coordenador da Missão Casa caracterizar como <i>“missão de risco”</i>, somente poderá ir à missão: quem estiver vivendo uma vida de oração; tiver confessado durante a semana; e ser membro da graduação <i>“Cruz da unidade prata média”.</i></p>
+
+		</div>
+
+		<div class="booklet">
+			<h3 id="16">16. COORDENAÇÃO</h3>
+
+			<h4 id ="16.1">16.1. COORDENADOR GERAL</h4>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;O COORDENADOR GERAL será aquele responsável por todas as missões e que também responderá pelas decisões e ações efetuadas pelos <i>“Jovens Católicos 33”</i>, todos os assuntos para serem aprovados e aplicados deverão ser passado por ele. O coordenador geral contará com um vice-coordenador que o auxiliará em tudo o que for preciso. O mesmo poderá responder pelo grupo na ausência do coordenador geral. Na ausência de ambos será escolhido um representante designado pelo próprio coordenador geral.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Lembrando que o coordenador geral é o primeiro a dar testemunho de como ser um bom cristão, o mesmo veio para servir e não para ser servido.</p>
+		
+
+		
+			<h5 id="16.1.1">16.1.1. OBRIGAÇÕES</h5>
+			<ul>
+				<li>Organizar as reuniões.</li>
+				<li>Acompanhar a evolução dos membros e motivá-los.</li>
+				<li>Servir a todos e estar disposto escutá-los nas partilhas pessoais.</li>
+				<li>Não ser autoritário.</li>
+				<li>Escutar a opinião dos membros.</li>
+				<li>Não fazer alterações diversas na missão sem o consentimento dos servos.</li>
+				<li>Não alterar regras já em vigor sem levar para reunião e aprovação da maioria.</li>
+				<li>Incentivar e fazer acontecer.</li>
+				<li>Reunir com os coordenadores de missão quando necessário.</li>
+				<li>Realizar eventos sazonais (dia das Crianças, Natal, Páscoa).</li>
+				<li>Realizar juntamente com o coordenador da formação e espiritualidade 4 vigílias anuais.</li>
+				<li>Organizar missões em locais solicitados ou que necessitem (Lar dos Idosos, Presídios, CAPS AD e CAPS II, Clínica de recuperação para dependentes químicos e alcoólatras, hospitais psiquiátricos, creches, escolas, Casa de recuperação para menores, APAE, etc.)</li>
+			</ul>
+
+			<h5 id="16.1.2">16.1.2. REQUISITOS PARA COORDENAÇÃO</h5>
+				<ul>
+					<li>A eleição para nova coordenação acontecerá anualmente, quando faltar aproximadamente um mês do aniversário da missão “Jovens Católicos 33” (28 de agosto), onde os membros se reunirão e farão a votação dos coordenadores e vice. </li>
+					<li>O coordenador poderá ser reeleito, porém no máximo uma vez consecutiva.</li>
+					<li>Quando o coordenador não for reeleito pelos votos ou por já ter sido reeleito o atual coordenador entrará na condição de conselheiro da nova coordenação.</li>
+					<li>O mais votado entrará como coordenador e terá o direito de escolher um vice. </li>
+					<li>O coordenador e vice terão o prazo de duas semanas para rezarem e escolherem os coordenadores de missão, sendo obrigatório que os membros que ficaram em 2º e 3º lugares mais votados sejam também coordenadores de alguma missão (rua, casa, Social, formação e espiritualidade).</li>
+					<li>Estar participando frequentemente das missões.</li>
+					<li>Ter entrado para participar a no mínimo 12 meses.</li>
+					<li>Disponibilidade de tempo para preparar reunião e ir às missões.</li>
+					<li>Ter liderança</li>
+					<li>Ser caridoso</li>
+				</ul>
+
+			<h5 id="16.1.3">16.1.3. MOTIVOS QUE DÃO DIREITO A TROCA DE COORDENAÇÃO</h5>
+				<ul>
+					<li>Descumprir as obrigações (acima citado) constantemente.</li>
+					<li>Brigar, provocando discórdias internas.</li>
+					<li>Dar contra testemunho</li>
+					<li>Não viver o carisma dos “Jovens Católicos 33”.</li>
+				</ul>
+
+			<h4 id ="16.2">16.2. COORDENAÇÃO DE MISSÕES</h4>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Cada missão terá um coordenador que zelará pela missão. As missões se resumem em MISSÃO CASA, MISSÃO RUA, MISSÃO SOCIAL, FORMAÇÃO E ESPIRITUALIDADE E CAIXA.</p>
+				
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Fica a critério do coordenador de missão a escolha de um vice-coordenador, quando necessário. A escolha do vice-coordenador deve ser feita em oração juntamente com todos os coordenadores.</p>
+ 				
+ 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os coordenadores têm algumas obrigações.</p>
+
+			<h4 id ="16.3">16.3. COORDENADOR DA MISSÃO CASA</h4>
+				<h5>OBRIGAÇÕES</h5>
+				<ul>
+					<li>Responder pela missão.</li>
+					<li>Ter o controle de todas as casas que solicitarem a visita.</li>
+					<li>Manter um cadastro das casas que foram visitadas.</li>
+					<li>Fazer um acompanhamento nas casas visitadas.</li>
+					<li>Informar a todos os membros o direcionamento do núcleo de oração e especialmente aos membros que irão conduzir toda a missão.</li>
+					<li>Avisar a família que nos acolherá a data e o horário da nossa visita, ou designar alguém para que avise a mesma.</li>
+					<li>Incentivar as pessoas a irem.</li>
+					<li>Orar pela missão.</li>
+					<li>Na ausência dos condutores da missão casa o coordenador da mesma escolherá com antecedência outro membro para conduzir ou ele mesmo o conduzirá.</li>
+				</ul>
+
+			<h4 id ="16.4">16.4. COORDENADOR DA MISSÃO RUA</h4>
+				<h5>OBRIGAÇÕES</h5>
+				<ul>
+					<li>Responder pela missão.</li>
+					<li>Ter o controle dos moradores de rua.</li>
+					<li>Avisar aos membros do grupo o dia, horário e o local que iniciará, evitando desmarcar de ultima hora a missão.</li>
+					<li>Preparar o “café” ou designar alguém que o faça.</li>
+					<li>Manter informado o coordenador da missão social as pessoas que desejam internação, voltar para sua cidade e etc.</li>
+					<li>Orar pela missão</li>
+				</ul>
+
+			<h4 id ="16.5">16.5. COORDENADOR DA MISSÃO SOCIAL</h4>
+				<h5>OBRIGAÇÕES</h5>
+				<ul>
+					<li>Responder pela missão.</li>
+					<li>Ter o controle dos moradores de rua.</li>
+					<li>Ter um contato frequente com a assistente social da cidade.</li>
+					<li>Desenvolver meios para a internação dos alcoólatras e dependentes químicos que queiram se tratar.</li>
+					<li>Auxiliar as famílias quais os lugares que é feito o cadastro para receber doações de cestas básicas, leites protéicos, remédios, fraudas, benefícios governamentais, programas sociais municipal, etc.</li>
+					<li>Encaminhar o morador de rua ou andarilho de volta à sua cidade de origem caso o mesmo deseje. Pelo programa MIGRANTE.</li>
+					<li>Ajudar na emissão da segunda via da documentação dos moradores de rua, caso tenha sido extraviado por algum motivo.</li>
+					<li>Promover campanhas sociais para arrecadação e doação de agasalhos e alimentos.</li>
+					<li>Desenvolver novas ideias.</li>
+					<li>Desenvolver encontro anual para moradores de rua, alcoólatras, dependentes químicos no qual haverá um cuidado espiritual e físico. Desde pregações, palestras motivacionais até higiene pessoal.</li>
+					<li>Orar pala missão.</li>
+				</ul>
+
+			<h4 id ="16.6">16.6. COORDENADOR DA FORMAÇÃO E ESPIRITUALIDADE</h4>
+				<h5>OBRIGAÇÕES</h5>
+				<ul>
+					<li>Responder pela formação e espiritualidade.</li>
+					<li>Preparar o material para a formação e comunicar a coordenação geral qual será o tema a ser executado e aguardar a aprovação do mesmo.</li>
+					<li>Avisar aos membros do grupo o dia, horário e o local que acontecerá, evitando desmarcar de ultima hora a formação.</li>
+					<li>Acompanhar a espiritualidade de todos os membros e se houver “esfriamento espiritual” de algum deles tratar na particularidade. Casa haja necessidade solicitar ajuda do sacerdote.</li>
+					<li>Organizar dois retiros anualmente e quando necessário.</li>
+					<li>Desenvolver o roteiro de oração, distribuir a todos os membros e acompanhar se eles estão evoluindo.</li>
+					<li>Cobrar a cada membro de suas obrigações.</li>
+					<li>Dar testemunho de quem cumpre com fidelidade o que se pede.</li>
+					<li>Coordenar à visita as casas e zelar pela capela da Mãe Três Vezes Admirável de Schoenstatt.</li>
+					<li>Designar um ou mais membros para trabalharem na evangelização das redes sociais, principalmente na página Jovens Católicos.</li>
+					<li>Orar pela vida espiritual de todos os membros.</li>
+				</ul>
+
+			<h4 id ="16.7">16.7. COORDENADOR DO CAIXA</h4>
+				<h5>OBRIGAÇÕES</h5>
+				<ul>
+					<li>Responder pelo Caixa.</li>
+					<li>Ter o controle por escrito de todo dinheiro que entra e sai.</li>
+					<li>Apresentar em reunião todas as entradas e saídas de dinheiro.</li>
+					<li>Ter responsabilidade com o dinheiro.</li>
+					<li>Cobrar a mensalidade dos membros. </li>
+					<li>Sugerir ao Coordenador Geral maneiras para entrada de dinheiro e maneiras ideais para gastar com itens necessários (cestas básicas, remédios, documentação, etc.).</li>
+					<li>Orar pela missão.</li>
+				</ul>
+
+		</div>
+
+		<div id="17" class="booklet">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Assim foi lavrado o presente documento, nomeado como Diretriz e Direcionamentos “Jovens Católicos 33”, para qualquer alteração neste documento é necessário o consentimento de todos os membros apoiado pela maioria presente em reunião, e deve ser levado ao sacerdote que estiver acompanhando e orientando a missão. Não sendo então permitido que a missão realize e ou faça novas missões sem o aviso prévio ao sacerdote.</p>
+
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Passos, 30 de julho de 2015</p>
+
+			<div class="center">
+			<p>
+				_______________________________<br/>
+				Luiz Felipe Lara Ávila<br/>
+				Coordenador Geral 2015<br/>
+			</p>
+
+			
+			<p>	_______________________________<br/>
+				Pe. Robison Inácio<br/>
+				Sacerdote atual da Paróquia São Benedito (Passos-MG)<br/>
+			</p>
+			</div>
+		</div>
+
+		<div class="center"><br/>Jovens Católicos 33<br/>_________________<br/>_____<br/>_</div>
+		<div class="scroll">
+			<a href="Diretriz-Jovens-Católicos4.pdf" target="_blank" title="Versão em PDF"><img id="pdf" src="img/pdf-icon.png"/></a>
+			<img id="up" src="img/up.png"/>
+		</div>
 	</body>
 </html>
