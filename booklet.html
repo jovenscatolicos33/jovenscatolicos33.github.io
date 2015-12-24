@@ -12,29 +12,14 @@
 				//roll page to up
 				$("#up").click(function() {$('html, body').animate({scrollTop:700}, 'slow');});
 
-				function filterPath(string) {
-				return string
-				.replace(/^\//,'')
-				.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-				.replace(/\/$/,'');
-				}
-				$('a[href*=#]').each(function() {
-				if ( filterPath(location.pathname) == filterPath(this.pathname)
-				&& location.hostname == this.hostname
-				&& this.hash.replace(/#/,'') ) {
-				var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-				var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-				if ($target) {
-				var targetOffset = $target.offset().top;
-				$(this).click(function() {
-				$('html, body').animate({scrollTop: targetOffset}, 600);
-				return false;
-				});
-				}
-				}
-				});
+				jQuery(document).ready(function($) { 
+   				$(".sum").click(function(event){        
+       			event.preventDefault();
+        		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+   });
+});
 			});
-			// ]]></script>
+			</script>
 
 	</head>
 
@@ -55,67 +40,67 @@
 		<div class="booklet summary">
 			<div class="center"><h2>Sumário</h2></div>
 			<ol>
-				<li><a href="#1">JOVENS CATÓLICOS 33</a></li>
-				<li><a href="#2">FRUTOS DO ESPÍRITO</a></li>
-				<li><a href="#3">A MÃE IGREJA</a></li>
-				<li><a href="#4">AMAR O PRÓXIMO COMO A TI MESMO</a></li>
-				<li><a href="#5">OBRAS DE MISERICÓRDIA</a></li>
-				<li><a href="#6">HISTÓRIA DOS JOVENS CATÓLICOS 33</a></li>
-				<li><a href="#7">CRUZ DA UNIDADE</a></li>
+				<li><a class="sum" href="#1">JOVENS CATÓLICOS 33</a></li>
+				<li><a class="sum" href="#2">FRUTOS DO ESPÍRITO</a></li>
+				<li><a class="sum" href="#3">A MÃE IGREJA</a></li>
+				<li><a class="sum" href="#4">AMAR O PRÓXIMO COMO A TI MESMO</a></li>
+				<li><a class="sum" href="#5">OBRAS DE MISERICÓRDIA</a></li>
+				<li><a class="sum" href="#6">HISTÓRIA DOS JOVENS CATÓLICOS 33</a></li>
+				<li><a class="sum" href="#7">CRUZ DA UNIDADE</a></li>
 					<ul>
-						<li>7.1<a href="#7.1"> HISTÓRIA DA CRUZ DA UNIDADE</a></li>
-						<li>7.2<a href="#7.2"> UNUM IN SANGUINE</a></li>
+						<li>7.1<a class="sum" href="#71"> HISTÓRIA DA CRUZ DA UNIDADE</a></li>
+						<li>7.2<a class="sum" href="#72"> UNUM IN SANGUINE</a></li>
 					</ul>
-				<li><a href="#8">OS BENS DA IGREJA</a></li>
-				<li><a href="#9">MÃE RAINHA</a></li>
-				<li><a href="#10">DIRETRIZES E DIRECIONAMENTOS JOVENS CATÓLICOS 33</a></li>
+				<li><a class="sum" href="#8">OS BENS DA IGREJA</a></li>
+				<li><a class="sum" href="#9">MÃE RAINHA</a></li>
+				<li><a class="sum" href="#10">DIRETRIZES E DIRECIONAMENTOS JOVENS CATÓLICOS 33</a></li>
 					<ul>
-						<li>10.1<a href="#10.1"> QUEM SOMOS NÓS?</a></li>
-						<li>10.2<a href="#10.2"> CARISMA</a></li>
-						<li>10.3<a href="#10.3"> BRASÃO</a></li>
-						<li>10.4<a href="#10.4"> OBEDIÊNCIA A SANTA IGREJA</a></li>
+						<li>10.1<a class="sum" href="#101"> QUEM SOMOS NÓS?</a></li>
+						<li>10.2<a class="sum" href="#102"> CARISMA</a></li>
+						<li>10.3<a class="sum" href="#103"> BRASÃO</a></li>
+						<li>10.4<a class="sum" href="#104"> OBEDIÊNCIA A SANTA IGREJA</a></li>
 					</ul>
-				<li><a href="#11">QUEM PODE ENTRAR NO GRUPO?</a></li>
+				<li><a class="sum" href="#11">QUEM PODE ENTRAR NO GRUPO?</a></li>
 					<ul>
-						<li>11.1<a href="#11.1"> MEMBROS</a></li>
-						<li>11.2<a href="#11.2"> DIREITOS DOS MEMBROS</a></li>
-						<li>11.3<a href="#11.3"> OBRIGAÇÕES DOS MEMBROS</a></li>
-						<li>11.4<a href="#11.4"> GRADUAÇÃO DO MEMBRO (CRUZ DA UNIDADE)</a></li>
+						<li>11.1<a class="sum" href="#111"> MEMBROS</a></li>
+						<li>11.2<a class="sum" href="#112"> DIREITOS DOS MEMBROS</a></li>
+						<li>11.3<a class="sum" href="#113"> OBRIGAÇÕES DOS MEMBROS</a></li>
+						<li>11.4<a class="sum" href="#114"> GRADUAÇÃO DO MEMBRO (CRUZ DA UNIDADE)</a></li>
 					</ul>
-				<li><a href="#12">FORMAÇÃO E ESPIRITUALIDADE</a></li>
+				<li><a class="sum" href="#12">FORMAÇÃO E ESPIRITUALIDADE</a></li>
 					<ul>
-						<li>12.1<a href="#12.1"> COMO É FEITO A REUNIÃO DE FORMAÇÃO?</a></li>
-						<li>12.2<a href="#12.2"> POR QUEM?</a></li>
-						<li>12.3<a href="#12.3"> 12.3. COMO SERÃO OS RETIROS?</a></li>
+						<li>12.1<a class="sum" href="#121"> COMO É FEITO A REUNIÃO DE FORMAÇÃO?</a></li>
+						<li>12.2<a class="sum" href="#122"> POR QUEM?</a></li>
+						<li>12.3<a class="sum" href="#123"> COMO SERÃO OS RETIROS?</a></li>
 					</ul>
-				<li><a href="#13">NÚCLEO</a></li>
+				<li><a class="sum" href="#13">NÚCLEO</a></li>
 					<ul>
-						<li>13.1<a href="#13.1"> COMO SERÁ FEITO O NÚCLEO?</a></li>
-						<li>13.2<a href="#13.2"> QUEM PARTICIPA DO NÚCLEO?</a></li>
+						<li>13.1<a class="sum" href="#131"> COMO SERÁ FEITO O NÚCLEO?</a></li>
+						<li>13.2<a class="sum" href="#132"> QUEM PARTICIPA DO NÚCLEO?</a></li>
 					</ul>
-				<li><a href="#14">REUNIÃO</a></li>
-				<li><a href="#15">MISSÃO</a></li>
+				<li><a class="sum" href="#14">REUNIÃO</a></li>
+				<li><a class="sum" href="#15">MISSÃO</a></li>
 					<ul>
-						<li>15.1<a href="#15.1"> MISSÃO RUA</a></li>
-						<li>15.2<a href="#15.2"> MISSÃO SOCIAL</a></li>
-						<li>15.3<a href="#15.3"> MISSÃO CASA</a></li>
+						<li>15.1<a class="sum" href="#151"> MISSÃO RUA</a></li>
+						<li>15.2<a class="sum" href="#152"> MISSÃO SOCIAL</a></li>
+						<li>15.3<a class="sum" href="#153"> MISSÃO CASA</a></li>
 					</ul>
-				<li><a href="#16">COORDENAÇÃO</a></li>
+				<li><a class="sum" href="#16">COORDENAÇÃO</a></li>
 					<ul>
-						<li>16.1<a href="#16.1"> COORDENADOR GERAL</a></li>
+						<li>16.1<a class="sum" href="#161"> COORDENADOR GERAL</a></li>
 							<ul>
-								<li>16.1.1<a href="#16.1.1"> OBRIGAÇÕES</a></li>
-								<li>16.1.2<a href="#16.1.2"> REQUISITOS PARA COORDENAÇÃO</a></li>
-								<li>16.1.3<a href="#16.1.3"> MOTIVOS QUE DÃO DIREITO A TROCA DE COORDENAÇÃO</a></li>
+								<li>16.1.1<a class="sum" href="#1611"> OBRIGAÇÕES</a></li>
+								<li>16.1.2<a class="sum" href="#1612"> REQUISITOS PARA COORDENAÇÃO</a></li>
+								<li>16.1.3<a class="sum" href="#1613"> MOTIVOS QUE DÃO DIREITO A TROCA DE COORDENAÇÃO</a></li>
 							</ul>
-						<li>16.2<a href="#16.2"> COORDENAÇÃO DE MISSÕES</a></li>
-						<li>16.3<a href="#16.3"> COORDENADOR DA MISSÃO CASA</a></li>
-						<li>16.4<a href="#16.4"> COORDENADOR DA MISSÃO RUA</a></li>
-						<li>16.5<a href="#16.5"> COORDENADOR DA MISSÃO SOCIAL</a></li>
-						<li>16.6<a href="#16.6"> COORDENADOR DA FORMAÇÃO E ESPIRITUALIDADE</a></li>
-						<li>16.7<a href="#16.7"> COORDENADOR DO CAIXA</a></li>
+						<li>16.2<a class="sum" href="#162"> COORDENAÇÃO DE MISSÕES</a></li>
+						<li>16.3<a class="sum" href="#163"> COORDENADOR DA MISSÃO CASA</a></li>
+						<li>16.4<a class="sum" href="#164"> COORDENADOR DA MISSÃO RUA</a></li>
+						<li>16.5<a class="sum" href="#165"> COORDENADOR DA MISSÃO SOCIAL</a></li>
+						<li>16.6<a class="sum" href="#166"> COORDENADOR DA FORMAÇÃO E ESPIRITUALIDADE</a></li>
+						<li>16.7<a class="sum" href="#167"> COORDENADOR DO CAIXA</a></li>
 					</ul>
-				<li><a href="#17">FINALIZAÇÃO</a></li>
+				<li><a class="sum" href="#17">FINALIZAÇÃO</a></li>
 			</ol>
 		</div>
 
@@ -127,7 +112,7 @@
 		
 			<h3 id="2">2. FRUTOS DO ESPÍRITO</h3>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Quando se dá abertura a ação do Espírito de amor em nosso interior, refletimos o amor de cristo no exterior. Sabe se que a caridade é um fruto do Espírito Santo, São Paulo numa de suas epístolas descreve; “mas o fruto do Espírito é: caridade, alegria, paz, paciência, afabilidade, bondade, fidelidade, brandura, temperança”. – Gálatas 5,22-23.</p>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;Sabemos que a Igreja de Cristo, isto é, a Igreja Católica Apostólica Romana é a Mãe da Caridade. Como somos dela temos que a honrá-la. “uma árvore boa não dá frutos maus,<i>"uma árvore má não dá bom fruto. Porquanto cada árvore se conhece pelo seu fruto...”</i> – São Lucas 6,43-44.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Sabemos que a Igreja de Cristo, isto é, a Igreja Católica Apostólica Romana é a Mãe da Caridade. Como somos dela temos que a honrá-la. <i>“uma árvore boa não dá frutos maus, uma árvore má não dá bom fruto."</i> Porquanto cada árvore se conhece pelo seu fruto... – São Lucas 6,43-44.</p>
 
 
 			<h3 id="3">3. A MÃE IGREJA</h3>
@@ -286,7 +271,7 @@
 		</div>
 
 		<div class="booklet">
-			<h4 id="7.1">7.1 HISTÓRIA DA CRUZ DA UNIDADE</h4>
+			<h4 id="71">7.1 HISTÓRIA DA CRUZ DA UNIDADE</h4>
 
 			<p><i>Quando os estudantes pallottinos, da  primeira geração do Chile, estavam para serem ordenados sacerdotes, nasceu entre eles o desejo de presentear ao Santuário de Bellavista – lugar que viu nascer e alimentou sua vocação – um crucifixo que expressasse a imagem de Cristo sacerdote, tal como desejavam vivê-lo, a partir da Aliança de Amor com Maria e à luz da imagem original de Cristo que o Fundador lhes transmitia. O pensamento central que quiseram expressar foi o Cristo dos vínculos. É o Cristo que, na força do Espírito Santo está profunda e intimamente vinculado como  Filho ao Pai. É o Cristo que está profunda e intimamente vinculado a Maria, sua Mãe, constituída como colaboradora e companheira permanente em sua missão redentora entre os homens. É o Cristo da Unidade, que une o céu e a terra; é o Cristo Bom Pastor que, refletindo o amor do Pai, une os homens a Deus e os homens entre si, fazendo-os filhos de um mesmo Pai. Na parte de trás dessa cruz gravaram as frases latinas que expressam os ideais e realidade: “Unum in saguine  (Unidos no Sangue de Cristo) + Tua res agitur (Trata-se de tua obra redentora) + Clarifica te (Glorifica-te em nossa pequenez e frauqeza)”.</p>
 
@@ -294,7 +279,7 @@
 		</div>
 
 		<div class="booklet">
-			<h4 id="7.2">7.2 UNUM IN SANGUINE</h4>
+			<h4 id="72">7.2 UNUM IN SANGUINE</h4>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Unidos no sangue de Cristo, se transformou num cumprimento entre os membros. Quando nos encontramos após a saudação <i>“Paz de Cristo”</i> dizemos; <i>“UNUM IN SANGUINE”.</i></p>
 
 			<i>“por intermédio daquele que, ao preço do próprio sangue na cruz, restabeleceu a paz a tudo quanto existe na terra e nos céus.”</i> – Colossenses 1;20.
@@ -338,10 +323,10 @@
 		<div class="booklet">
 			<h3 id="10">10. DIRETRIZES E DIRECIONAMENTOS JOVENS CATÓLICOS 33</h3>
 
-				<h4 id ="10.1">10.1. QUEM SOMOS NÓS?</h4>
+				<h4 id ="101">10.1. QUEM SOMOS NÓS?</h4>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os jovens católicos 33 é uma missão de caridade e evangelização, um grupo de jovens que expressam em obras caritativas sua fé e através do anuncio do evangelho resgatar as almas que estão se perdendo nos prazeres do mundo.</p>
 
-				<h4 id ="10.2">10.2. CARISMA</h4>
+				<h4 id ="102">10.2. CARISMA</h4>
 
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Carisma é a graça que Deus concede a seus filhos para que eles desenvolvam obras específicas dentro do Corpo Místico. É uma autoridade na qual Deus nos reveste para servir ao próximo. É uma fonte que Deus faz jorrar dentro do nosso coração, que por sua vez, deságua no coração do outro.</p>
 				
@@ -355,7 +340,7 @@
 		</div>
 
 		<div class="booklet">
-			<h4 id ="10.3">10.3. BRASÃO</h4>
+			<h4 id ="103">10.3. BRASÃO</h4>
 
 			<div class="center"><img src="img/brasao.png"/></div>
 
@@ -368,7 +353,7 @@
 				</figure>
 			</div>
 
-			<h4 id ="10.4">10.4. OBEDIÊNCIA A SANTA IGREJA</h4>
+			<h4 id ="104">10.4. OBEDIÊNCIA A SANTA IGREJA</h4>
 
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Por conta dos “Jovens Católicos 33” serem ligados e terem um foco em levar pessoas para a Santa I.C.A.R.. Queremos sempre nos manter em unidade com a mesma, por isso temos e devemos obediência às autoridades da Santa Igreja, em especial o nosso Pároco, onde todas as ordens dadas por ele serão acatadas, mesmo que infelizmente não venha a nos favorecer.</p>
 
@@ -382,11 +367,11 @@
 
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Entrada no grupo: todas as pessoas estão aptas a entrar no grupo. Exceto aquelas pessoas que não compartilharem do <i>“carisma”</i>.</p>
 
-				<h4 id ="11.1">11.1. MEMBROS</h4>
+				<h4 id ="111">11.1. MEMBROS</h4>
 
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os membros deverão dar exemplo, indo na santa missa dominical, (não podendo nunca faltar da mesma, somente por motivos maiores), a missa é o ponto maior dos <i>“jovens católicos 33”</i>, é orientado nunca faltar, e também se possível ir à missa diária, é orientado a confissão mensal,  é sugerido diariamente  a oração do santo terço e a leitura orante da Sagrada Escritura, é orientado a fazer jejum nas quarta e sextas feiras, pelo menos uma hora de  adoração eucarística semanal. Após a participação em 5 missões, o coordenador geral terá uma conversa com o membro. Perguntando <i>“se o mesmo gostou das missões e se deseja continuar?”</i>. Caso a resposta seja positiva, o membro ganhará uma cruz da unidade, de acordo com a graduação avaliada pelo coordenador, na qual será tratada no tópico 11.4., e a partir de então precisará seguir as obrigações impostas pela missão (tópico 11.3.).</p>
 
-				<h4 id ="11.2">11.2. DIREITOS DOS MEMBROS</h4>
+				<h4 id ="112">11.2. DIREITOS DOS MEMBROS</h4>
 				<ol>
 					<li>Sugerir novas ideias;</li>
 					<li>Participar de todas as reuniões;</li>
@@ -397,7 +382,7 @@
 					<li>Pedir uma reavaliação da Graduação Espiritual.</li>
 				</ol>
 
-				<h4 id ="11.3">11.3. OBRIGAÇÕES DOS MEMBROS</h4>
+				<h4 id ="113">11.3. OBRIGAÇÕES DOS MEMBROS</h4>
 				<ol>
 					<li>Ter frequência nas atividades do grupo;</li>
 					<li>Obediência aos comandos do Coordenador Geral;</li>
@@ -406,7 +391,7 @@
 					<li>Manter a unidade sempre, respeitando o outro membro independente da graduação.</li>
 				</ol>
 
-				<h4 id ="11.4">11.4. GRADUAÇÃO DO MEMBRO (CRUZ DA UNIDADE)</h4>
+				<h4 id ="114">11.4. GRADUAÇÃO DO MEMBRO (CRUZ DA UNIDADE)</h4>
 
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;A graduação do membro acontecerá para marcar as etapas de suas evoluções dentro do grupo. Caberá aos coordenadores de missão e formação junto com o coordenador geral avaliar se poderá ser feito a troca simbólica da cruz da unidade de cada membro.</p>
 
@@ -428,14 +413,14 @@
 
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Inicialmente é explicado aos novos membros o que o <i>“Jovens Católicos 33”</i> é e faz. E claro, são feitas outras formações mais aprofundadas como: sobre a Santa Igreja, documentos da Igreja, estudo bíblico, leitura de livros de autores Católicos, histórias de santos, etc.</p>
 
-			<h4 id ="12.1">12.1. COMO É FEITO A REUNIÃO DE FORMAÇÃO?</h4>
+			<h4 id ="121">12.1. COMO É FEITO A REUNIÃO DE FORMAÇÃO?</h4>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Todas as reuniões de formação serão feitas semanalmente, ou em retiros realizados no final de semana.</p>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Elas são feitas das seguintes formas; com um dos formadores conduzindo-as ou mesmo com as aplicações de vídeos e áudios.</p>
 
-			<h4 id ="12.2">12.2. POR QUEM?</h4>
+			<h4 id ="122">12.2. POR QUEM?</h4>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Pelo membro coordenador da formação, ou por outra pessoa designada pelo mesmo.</p>
 
-			<h4 id ="12.3">12.3. COMO SERÃO OS RETIROS?</h4>
+			<h4 id ="123">12.3. COMO SERÃO OS RETIROS?</h4>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Serão feitos aos finais de semana, marcados antecipadamente em oração. Haverá dois retiros anualmente, podendo ser de formação e de reabastecimento. Também no retiro haverá louvores e pregações. Sendo cada pregação vinculada a um santo da Igreja. (Também poderá ser feito um retiro quando houver outras necessidades).</p>
 
 		</div>
@@ -445,10 +430,10 @@
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;O núcleo será feito semanalmente, visando o êxito de todas as missões dos “jovens católicos 33”.</p>
 
 
-			<h4 id ="13.1">13.1. COMO SERÁ FEITO O NÚCLEO?</h4>
+			<h4 id ="131">13.1. COMO SERÁ FEITO O NÚCLEO?</h4>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Da seguinte forma: com a presença de pelo menos três membros, onde reunirão e entrarão em oração profunda, aberto aos direcionamentos suscitados pelo Espírito Santo.</p>
 
-			<h4 id ="13.2">13.2. QUEM PARTICIPA DO NÚCLEO?</h4>
+			<h4 id ="132">13.2. QUEM PARTICIPA DO NÚCLEO?</h4>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Todos estão aptos a estarem no núcleo, porém terão que fazer a formação a respeito do núcleo. 
 			(esta formação será passada pelo coordenador da formação)
 			É obrigatório ter esta formação para participar do núcleo.</p>
@@ -464,7 +449,7 @@
 			<h3 id="15">15. MISSÃO</h3>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Os <i>“Jovens Católicos 33”</i> conta com diversos tipos de missões, e cada missão possui uma coordenação, na qual o coordenador de missão tem por obrigação incentivar e fazer com que a missão venha acontecer.</p>
 
-			<h4 id ="15.1">15.1.  MISSÃO RUA</h4>
+			<h4 id ="151">15.1.  MISSÃO RUA</h4>
 
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;<i>“Missão Rua”</i> é a nossa missão por excelência, onde visamos fazer a Caridade, reunimos semanalmente com intuito de levar um <i>“café”</i> aos moradores de rua, conversar com eles, louvar a Deus, sorrir e chorar juntos e entender a vida de cada um de maneira exclusiva, dedicando a eles todo tempo. </p>
 
@@ -472,12 +457,12 @@
 
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Restrições: Menores de 18 anos, exceto com autorização do responsável.</p>
 
-			<h4 id ="15.2">15.2.  MISSÃO SOCIAL</h4>
+			<h4 id ="152">15.2. MISSÃO SOCIAL</h4>
 
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;A Missão Social busca dar uma vida nova as pessoas que necessitam de ajuda, esta missão é distribuída a todos os membros. Ex: Durante alguma missão foi encontrado um alcoólatra que deseja internação, então o coordenador da missão social liderará mais uma missão para conseguirmos interná-lo. E assim será em todas as missões, se precisar de fraldas, medicamentos, alimentos, internação, agasalhos, voltar pra família ou qualquer serviço social para uma vida digna nós correremos atrás.</p>
 
 
-			<h4 id ="15.3">15.3.  MISSÃO CASA</h4>
+			<h4 id ="153">15.3.  MISSÃO CASA</h4>
 
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Missão Casa visa ir à casa de pessoas que solicitam a nossa ajuda. Durante a visita acontecerá uma reunião de oração, de acordo com o que foi passado pelo núcleo de oração.  A reunião nesta casa deverá conter momentos como: Louvor, Pregação. Cujo foco desta missão é levá-las novamente para a Santa Igreja.</p>
 
@@ -488,14 +473,14 @@
 		<div class="booklet">
 			<h3 id="16">16. COORDENAÇÃO</h3>
 
-			<h4 id ="16.1">16.1. COORDENADOR GERAL</h4>
+			<h4 id ="161">16.1. COORDENADOR GERAL</h4>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;O COORDENADOR GERAL será aquele responsável por todas as missões e que também responderá pelas decisões e ações efetuadas pelos <i>“Jovens Católicos 33”</i>, todos os assuntos para serem aprovados e aplicados deverão ser passado por ele. O coordenador geral contará com um vice-coordenador que o auxiliará em tudo o que for preciso. O mesmo poderá responder pelo grupo na ausência do coordenador geral. Na ausência de ambos será escolhido um representante designado pelo próprio coordenador geral.</p>
 
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;Lembrando que o coordenador geral é o primeiro a dar testemunho de como ser um bom cristão, o mesmo veio para servir e não para ser servido.</p>
 		
 
 		
-			<h5 id="16.1.1">16.1.1. OBRIGAÇÕES</h5>
+			<h5 id="1611">16.1.1. OBRIGAÇÕES</h5>
 			<ul>
 				<li>Organizar as reuniões.</li>
 				<li>Acompanhar a evolução dos membros e motivá-los.</li>
@@ -511,7 +496,7 @@
 				<li>Organizar missões em locais solicitados ou que necessitem (Lar dos Idosos, Presídios, CAPS AD e CAPS II, Clínica de recuperação para dependentes químicos e alcoólatras, hospitais psiquiátricos, creches, escolas, Casa de recuperação para menores, APAE, etc.)</li>
 			</ul>
 
-			<h5 id="16.1.2">16.1.2. REQUISITOS PARA COORDENAÇÃO</h5>
+			<h5 id="1612">16.1.2. REQUISITOS PARA COORDENAÇÃO</h5>
 				<ul>
 					<li>A eleição para nova coordenação acontecerá anualmente, quando faltar aproximadamente um mês do aniversário da missão “Jovens Católicos 33” (28 de agosto), onde os membros se reunirão e farão a votação dos coordenadores e vice. </li>
 					<li>O coordenador poderá ser reeleito, porém no máximo uma vez consecutiva.</li>
@@ -525,7 +510,7 @@
 					<li>Ser caridoso</li>
 				</ul>
 
-			<h5 id="16.1.3">16.1.3. MOTIVOS QUE DÃO DIREITO A TROCA DE COORDENAÇÃO</h5>
+			<h5 id="1613">16.1.3. MOTIVOS QUE DÃO DIREITO A TROCA DE COORDENAÇÃO</h5>
 				<ul>
 					<li>Descumprir as obrigações (acima citado) constantemente.</li>
 					<li>Brigar, provocando discórdias internas.</li>
@@ -533,14 +518,14 @@
 					<li>Não viver o carisma dos “Jovens Católicos 33”.</li>
 				</ul>
 
-			<h4 id ="16.2">16.2. COORDENAÇÃO DE MISSÕES</h4>
+			<h4 id ="162">16.2. COORDENAÇÃO DE MISSÕES</h4>
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Cada missão terá um coordenador que zelará pela missão. As missões se resumem em MISSÃO CASA, MISSÃO RUA, MISSÃO SOCIAL, FORMAÇÃO E ESPIRITUALIDADE E CAIXA.</p>
 				
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;Fica a critério do coordenador de missão a escolha de um vice-coordenador, quando necessário. A escolha do vice-coordenador deve ser feita em oração juntamente com todos os coordenadores.</p>
  				
  				<p>&nbsp;&nbsp;&nbsp;&nbsp;Os coordenadores têm algumas obrigações.</p>
 
-			<h4 id ="16.3">16.3. COORDENADOR DA MISSÃO CASA</h4>
+			<h4 id ="163">16.3. COORDENADOR DA MISSÃO CASA</h4>
 				<h5>OBRIGAÇÕES</h5>
 				<ul>
 					<li>Responder pela missão.</li>
@@ -554,7 +539,7 @@
 					<li>Na ausência dos condutores da missão casa o coordenador da mesma escolherá com antecedência outro membro para conduzir ou ele mesmo o conduzirá.</li>
 				</ul>
 
-			<h4 id ="16.4">16.4. COORDENADOR DA MISSÃO RUA</h4>
+			<h4 id ="164">16.4. COORDENADOR DA MISSÃO RUA</h4>
 				<h5>OBRIGAÇÕES</h5>
 				<ul>
 					<li>Responder pela missão.</li>
@@ -565,7 +550,7 @@
 					<li>Orar pela missão</li>
 				</ul>
 
-			<h4 id ="16.5">16.5. COORDENADOR DA MISSÃO SOCIAL</h4>
+			<h4 id ="165">16.5. COORDENADOR DA MISSÃO SOCIAL</h4>
 				<h5>OBRIGAÇÕES</h5>
 				<ul>
 					<li>Responder pela missão.</li>
@@ -581,7 +566,7 @@
 					<li>Orar pala missão.</li>
 				</ul>
 
-			<h4 id ="16.6">16.6. COORDENADOR DA FORMAÇÃO E ESPIRITUALIDADE</h4>
+			<h4 id ="166">16.6. COORDENADOR DA FORMAÇÃO E ESPIRITUALIDADE</h4>
 				<h5>OBRIGAÇÕES</h5>
 				<ul>
 					<li>Responder pela formação e espiritualidade.</li>
@@ -597,7 +582,7 @@
 					<li>Orar pela vida espiritual de todos os membros.</li>
 				</ul>
 
-			<h4 id ="16.7">16.7. COORDENADOR DO CAIXA</h4>
+			<h4 id ="167">16.7. COORDENADOR DO CAIXA</h4>
 				<h5>OBRIGAÇÕES</h5>
 				<ul>
 					<li>Responder pelo Caixa.</li>

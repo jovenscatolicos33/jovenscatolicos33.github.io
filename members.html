@@ -12,6 +12,8 @@
 			$(window).load(function() {
 				//active wow.js 'scroll with animate.css'
 				new WOW().init();
+				$(".loading").fadeOut();
+				$(".members").fadeIn();
 			});
 		</script>
 	</head>
@@ -19,9 +21,19 @@
 	<body class="clear">
 		<div class="title">
 		<h1>Membros</h1>
+		<div class="loading wow bounce infinite"><h3>Aguarde...</h3></div>
 		</div>
+		<img src="img/brasao2.png" class="logo"/>
+		
 
 		<div class="members">
+
+			<figure class="wow bounceInLeft">
+			<a href="https://www.facebook.com/felipeavila20?fref=ts" target="_blank">
+			<img src="img/members/avila.jpg" title="Sem título"/>
+			</a>
+			<figcaption>O Avila</figcaption>
+			</figure>
 
 			<figure class="wow bounceInLeft">
 			<a href="https://www.facebook.com/andressa.paloma.94?fref=ts" target="_blank">
@@ -106,12 +118,19 @@
 			</a>
 			<figcaption>Feijão</figcaption>
 			</figure>
+
+			<figure class="wow bounceInLeft">
+			<a href="https://www.facebook.com/giselle.mello.90" target="_blank">
+			<img src="img/members/gii.jpg" title="Embrulhadora de presentes"/>
+			</a>
+			<figcaption>Gii</figcaption>
+			</figure>
 		
 		</div>
 		
 		<!-- footer -->
 		<div class="clear footer">
-		Jovens Católicos 33, Passos - MG, 2015
+		Jovens Católicos 33, Passos - MG, 2016
 		</div>
 	</body>
 </html>

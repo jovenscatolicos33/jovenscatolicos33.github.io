@@ -10,6 +10,7 @@ body{
 	font-family: 'FontBody';
 	background-image: url("../img/backbooklet.jpg");
 	font-size: 15pt;
+	color: white;
 }
 .top h1{
 	margin: 0;
@@ -25,7 +26,7 @@ body{
 	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 	padding: 5%;
 	text-align: justify;
-
+	color: black;
 }
 @media (max-width: 900px){
  	.booklet {

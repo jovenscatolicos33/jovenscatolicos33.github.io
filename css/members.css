@@ -2,7 +2,7 @@
 	width: 80%;
 	text-align: left;
 	margin: auto;
-	
+	display: none;
 }
 .members figure{
 	display: inline-block;
@@ -27,6 +27,13 @@
 .members figcaption{
 	margin-top: 15px;
  }
+ .logo{
+	position: fixed;
+	margin: 1px;
+	right: 0pt;
+	top: 0pt;
+	width: 10%;
+}
 
 
 
