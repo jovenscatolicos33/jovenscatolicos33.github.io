@@ -13,9 +13,6 @@ $(document).ready(function () {
 	$("#down").click(function() {$('html, body').animate({scrollTop:3500}, 'slow');});
 	});
 
-	//play song when mouseover img contacts
-	$(".contacts img").mouseover(function() {playsong();});
-
 	//controll show scroll
 	window.onscroll = function () {
 		if (window.scrollY < 100)
@@ -30,8 +27,3 @@ $(document).ready(function () {
 	}
 	
 });
-
-//function for play song
-function playsong(){
-	document.getElementById("sound").play();
-}
